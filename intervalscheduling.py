@@ -70,18 +70,18 @@ class Solution:
         # print(cheek)
 
 def main():
-    # string = input()
-    # string = string.replace(" ", "")  # Remove any whitespace in the string
-    # string = string.replace("),", ")|")  # Replace the comma between tuples with a custom separator
+    string = input()
+    string = string.replace(" ", "")  # Remove any whitespace in the string
+    string = string.replace("),", ")|")  # Replace the comma between tuples with a custom separator
     
-    # list_from_string = string.split("|")  # Split the string into individual tuple strings
+    list_from_string = string.split("|")  # Split the string into individual tuple strings
     
-    # # Convert the tuple strings to actual tuples
-    # result = [eval(tuple_str) for tuple_str in list_from_string]
+    # Convert the tuple strings to actual tuples
+    result = [eval(tuple_str) for tuple_str in list_from_string]
 
                 
     tc1= Solution()
-    ans=tc1.interval_scheduling([(1, 2), (2, 3), (3, 4)])
+    ans=tc1.interval_scheduling(result)
     print(ans)
     
 if __name__ == "__main__":
