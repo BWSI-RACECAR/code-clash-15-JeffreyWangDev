@@ -39,10 +39,12 @@ Select all three (1, 2), (2, 3) and (3, 4) as those are all compatible events an
 def find_max(intervals, result=[], i=0):
     if i==len(intervals):
         return result
-    if len(intervals)==0:
+    if len(intervals)==1:
         return result
     end = []
     for j in intervals:
+        print(i)
+        print(intervals)
         if j[0]>=intervals[i][1]:
             end.append(j)
     end.append(intervals[i])
@@ -54,6 +56,7 @@ def find_max(intervals, result=[], i=0):
 class Solution:
     def interval_scheduling(self, intervals):
         intervals.sort(key=lambda x: x[0])
+        print(intervals)
         a = find_max(intervals)
         a.sort(key=lambda x: x[0])
         return a
@@ -78,7 +81,7 @@ def main():
 
                 
     tc1= Solution()
-    ans=tc1.interval_scheduling([(1, 4), (2, 5), (4, 7),(3, 6)])
+    ans=tc1.interval_scheduling([(1, 2), (2, 3), (3, 4)])
     print(ans)
     
 if __name__ == "__main__":
