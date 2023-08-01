@@ -56,9 +56,12 @@ def find_max(intervals, result=[], i=0):
 class Solution:
     def interval_scheduling(self, intervals):
         intervals.sort(key=lambda x: x[0])
+        
         print(intervals)
         a = find_max(intervals)
         a.sort(key=lambda x: x[0])
+        if len(a)==1:
+            a = a[-1]
         return a
         # cheek = []
         # for l in range(len(intervals)):
@@ -81,7 +84,7 @@ def main():
 
                 
     tc1= Solution()
-    ans=tc1.interval_scheduling(result)
+    ans=tc1.interval_scheduling([(1, 5), (2, 4), (3, 6), (5, 7)])
     print(ans)
     
 if __name__ == "__main__":
