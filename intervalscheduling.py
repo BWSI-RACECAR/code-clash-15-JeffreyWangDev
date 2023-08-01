@@ -84,7 +84,7 @@ def main():
 
                 
     tc1= Solution()
-    ans=tc1.interval_scheduling([(1, 5), (2, 4), (3, 6), (5, 7)])
+    ans=tc1.interval_scheduling(result)
     print(ans)
     
 if __name__ == "__main__":
