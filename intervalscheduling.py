@@ -61,7 +61,7 @@ class Solution:
         a = find_max(intervals)
         a.sort(key=lambda x: x[0])
         if len(a)==1:
-            a = intervals
+            a = intervals[-1]
         return a
         # cheek = []
         # for l in range(len(intervals)):
