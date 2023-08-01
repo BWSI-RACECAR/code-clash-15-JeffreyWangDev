@@ -44,20 +44,16 @@ def find_max(intervals, result=[], i=0):
     end = []
     for j in intervals:
         print(i)
-        print(intervals)
         if j[0]>=intervals[i][1]:
             end.append(j)
     end.append(intervals[i])
     if len(end)>len(result):
         result = end
-    
     return find_max(end,result,i+1)
 
 class Solution:
     def interval_scheduling(self, intervals):
         intervals.sort(key=lambda x: x[1])
-        
-        print(intervals)
         a = find_max(intervals)
         a.sort(key=lambda x: x[0])
         if a ==intervals:
